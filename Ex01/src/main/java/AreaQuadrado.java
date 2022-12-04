@@ -16,7 +16,7 @@ public class AreaQuadrado {
         resultado = Math.pow(a,2);
         
         // Mostra o resultado
-        System.out.println("O resultado é: " + a);
+        System.out.println("O resultado é: " + resultado);
     
     }
 }

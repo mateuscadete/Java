@@ -1,4 +1,4 @@
-package mavenproject.ex1;
+package mavenproject.ex12;
 
 import javax.swing.JOptionPane;
 

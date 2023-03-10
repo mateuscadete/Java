@@ -46,14 +46,31 @@ public class Ex40 {
     }
 
     public static void mostraPrimos(int[] vet) {
-        int i = 0, i2 = 0;
+        int i = 0, i2 = 0, tamanho = 0;
+
+        if (vet[0] < vet[1]) {
+            tamanho = vet[1] - vet[0];
+        } else {
+            tamanho = vet[0] - vet[1];
+        }
+
+        int array[] = new int[tamanho];
 
         for (int i = vet[0]; i <= vet[1]; i++) {
-            for (int i2 = i + 1; i <= vet[1]; i++) {
-                if (i % i2 == 0) {  
-                    JOptionPane.showMessageDialog(null, vet[0]);
+            int eprimo = 0, nprimo = 0;
+            
+            for (int i2 = i + 1; i2 <= vet[1]; i++) {
+                if (array[i] % array[i2] == 0) {
+                    nprimo = nprimo + 1;
+                } else if (array[i] % 1 == 0 && array[i] % array[i] == 0) {
+                    eprimo = eprimo + 1;
+                }
+                
+                if(eprimo == 1 && nprimo == 0){
+                    JOptionPane.showMessageDialog(null, array[i]);
                 }
             }
         }
+
     }
 }
